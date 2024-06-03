@@ -1,13 +1,14 @@
 import './App.css';
 
+function getGreeet(greet) {
+  return greet;
+}
+
 function App() {
-  const welcome={
-    greeting:"Welcome! ",
-    title:"React"
-  }
+
   return (
     <div className="App">
-      <h1>Hello {welcome.greeting} {welcome.title}</h1>
+      <h1>Hello {getGreeet('Welcome')}</h1>
       <label htmlFor='search'>Search:</label>
       <input id='search' type='text'></input>
     </div>
