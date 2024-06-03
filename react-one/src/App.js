@@ -18,6 +18,11 @@ const list = [
   objectID: 1,
   },
   ];
+
+const numbers=[1,2,3,4,5]
+const res=numbers.map(function (num) {
+  return num * num
+})
 function App() {
 
   return (
@@ -36,6 +41,7 @@ function App() {
           })
         }
       </ul>
+      <h1>{''+res}</h1>
     </div>
   );
 }
