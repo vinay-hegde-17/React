@@ -1,19 +1,24 @@
-import React from 'react'
+import { useState } from "react";
 
-function Another(props) {
+function ChildComponent({ onIncrement }) {
   return (
-    <div>
-     <ul>
-        {props.list.map((val)=>{
-            return(
-                <li key={val.author}>
-                <h1>{val.author}</h1>
-            </li>
-            )
-        })}
-    </ul> 
-    </div>
-  )
+    <button onClick={onIncrement}>Increment Count</button>
+  );
 }
 
-export default Another
+export default function ParentComponent() {
+  const [count, setCount] = useState(0);
+
+  const handleIncrement = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <ChildComponent onIncrement={handleIncrement} />
+    </div>
+  );
+}
+
+
