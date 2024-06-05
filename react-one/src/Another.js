@@ -1,24 +1,19 @@
-import { useState } from "react";
+import React, { useState } from 'react'
 
-function ChildComponent({ onIncrement }) {
-  return (
-    <button onClick={onIncrement}>Increment Count</button>
-  );
-}
-
-export default function ParentComponent() {
-  const [count, setCount] = useState(0);
-
-  const handleIncrement = () => {
-    setCount(prevCount => prevCount + 1);
-  };
-
+function Another(props) {
+  const[name, setName]=useState();
+  function handleSubmit(event){
+    event.preventDefault();
+    props.getData(name);
+  }
   return (
     <div>
-      <h1>Count: {count}</h1>
-      <ChildComponent onIncrement={handleIncrement} />
+      <form onSubmit={handleSubmit}>
+        <input type='text' value={name} onChange={(e)=>{setName(e.target.value)}}></input>
+        <button>Submit</button>
+      </form>
     </div>
-  );
+  ) 
 }
 
-
+export default Another
