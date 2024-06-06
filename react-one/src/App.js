@@ -3,6 +3,7 @@ import Another from "./Another";
 import Simple from "./Simple";
 import { useState } from "react";
 import ImperativeComponent from "./ImperativeComponet";
+import MyComponent from "./MyComponent";
 import Lift from "./Lift";
 import Data from "./Data";
 
@@ -30,6 +31,7 @@ function App() {
     <h1>HOC</h1>
     <HOC cmp={Counter}/>
     <ImperativeComponent/>
+    <MyComponent/>
     <Lift/>
     <Data/>
     </div>
