@@ -1,6 +1,7 @@
 import "./App.css";
 import Another from "./Another";
 import Simple from "./Simple";
+import Data from "./Data";
 
 function getData(data) {
   console.log(data);
@@ -25,6 +26,7 @@ function App() {
     <Simple/>
     <h1>HOC</h1>
     <HOC cmp={Counter}/>
+    <Data/>
     </div>
   );
 }
