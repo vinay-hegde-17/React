@@ -1,6 +1,8 @@
 import "./App.css";
 import Another from "./Another";
 import Simple from "./Simple";
+import { useState } from "react";
+import ImperativeComponent from "./ImperativeComponet";
 import Data from "./Data";
 
 function getData(data) {
@@ -26,6 +28,7 @@ function App() {
     <Simple/>
     <h1>HOC</h1>
     <HOC cmp={Counter}/>
+    <ImperativeComponent/>
     <Data/>
     </div>
   );
