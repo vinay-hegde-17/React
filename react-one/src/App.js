@@ -34,6 +34,11 @@ function App() {
     <MyComponent/>
     <Lift/>
     <Data/>
+    <daydata.Provider value={day}>
+    <placedata.Provider value={place}>
+    <ChildA/>
+    </placedata.Provider>
+    </daydata.Provider>
     </div>
   );
 }
