@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function Button(props) {
-  return <button onClick={props.onHandle}>Click</button>;
+function Button({onHandle}) {
+  return <button onClick={onHandle}>Click</button>;
 }
 
 function Simple() {

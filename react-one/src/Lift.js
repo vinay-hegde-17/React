@@ -7,6 +7,7 @@ function InputComponet({sharedState,setSharedState}) {
 }
 
 function DisplayComponet({sharedState}) {
+  console.log(sharedState);
   return <p>{sharedState} </p>
 }
 function Lift() {

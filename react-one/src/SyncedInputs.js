@@ -3,7 +3,8 @@ import React, { useState } from "react";
 function SyncedInputs() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [text, setText] = useState("");
-
+console.log(activeIndex);
+console.log(text);
   return (
     <>
       <Input
@@ -24,16 +25,16 @@ function SyncedInputs() {
   );
 }
 
-function Input({ label, text, onChange, onChangeText }) {
+function Input(props) {
   function handleChange(e) {
-    onChangeText(e.target.value);
-    onChange();
+    props.onChangeText(e.target.value);
+    props.onChange();
   }
 
   return (
     <label>
-      {label}
-      <input value={text} onChange={handleChange} />
+      {props.label}
+      <input value={props.text} onChange={handleChange} />
     </label>
   );
 }
